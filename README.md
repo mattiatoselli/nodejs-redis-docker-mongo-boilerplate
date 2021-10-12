@@ -8,5 +8,7 @@ A boilerplate for your nodejs app. Comes with a built in docker configuration, a
 ## Installation
 Pull the repo, and launch the build.
 ```bash
+git clone https://github.com/mattiatoselli/nodejs-redis-docker-mongo-boilerplate.git app
+cd app
 docker-compose up
 ```
