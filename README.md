@@ -12,3 +12,11 @@ git clone https://github.com/mattiatoselli/nodejs-redis-docker-mongo-boilerplate
 cd app
 docker-compose up
 ```
+
+## Packages
+- Joi: for data validation.
+- Cors: to enable CORS requests.
+- Mongodb: Node driver for Mongo.
+- Express: to handle request.
+
+If you feel you need more packages, just install node and npm in your host.
