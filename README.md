@@ -17,6 +17,7 @@ docker-compose up
 - Joi: for data validation.
 - Cors: to enable CORS requests.
 - Mongodb: Node driver for Mongo.
-- Express: to handle request.
+- Express: to handle requests faster.
+- Redis: Redis driver for Node.
 
 If you feel you need more packages, just install node and npm in your host.
