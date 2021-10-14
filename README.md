@@ -21,3 +21,11 @@ docker-compose up
 - Redis: Redis driver for Node.
 
 If you feel you need more packages, just install node and npm in your host.
+
+## Configuration
+Copy the .envexamplefile in .env and change the configurations.
+```bash
+scp .envexample .env
+```
+
+Change the token secret and the db name, if you want to use the mongo container, just maintain the string as it is, if you want to use other instances just change it with the correct one.
