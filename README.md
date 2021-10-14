@@ -10,6 +10,7 @@ Pull the repo, and launch the build.
 ```bash
 git clone https://github.com/mattiatoselli/nodejs-redis-docker-mongo-boilerplate.git app
 cd app
+mkdir db
 docker-compose up
 ```
 
