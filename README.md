@@ -28,4 +28,5 @@ Copy the .envexamplefile in .env and change the configurations.
 scp .envexample .env
 ```
 
-Change the token secret and the db name, if you want to use the mongo container, just maintain the string as it is, if you want to use other instances just change it with the correct one.
+Change the token secret and the db name, if you want to use the mongo container, just maintain the string as it is. 
+If you want to use other mongo providers just change it with the correct one.
