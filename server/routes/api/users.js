@@ -16,7 +16,7 @@ router.get('/', helpers.authenticateToken, helpers.isAdmin, async(req, res) => {
     const client = await mongodb.MongoClient.connect(process.env.CONNECTION_STRING, {
         useNewUrlParser: true
     });
-    const usersClient = await client.db('hct-formation').collection('users');
+    const usersClient = await client.db(process.env.DB_NAME).collection('users');
     const users = await usersClient.find({ email: { '$regex': filter, '$options': 'i' } }, { limit: limit, skip: skip }).toArray();
     return res.send(users);
 });

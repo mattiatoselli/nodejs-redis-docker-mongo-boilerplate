@@ -68,7 +68,7 @@ router.post('/register', async(req, res) => {
         const client = await mongodb.MongoClient.connect(process.env.CONNECTION_STRING, {
             useNewUrlParser: true
         });
-        const usersClient = await client.db('hct-formation').collection('users');
+        const usersClient = await client.db(process.env.DB_NAME).collection('users');
         const foundUser = await usersClient.findOne({
             email: data.email
         });
@@ -95,7 +95,7 @@ router.post('/register', async(req, res) => {
             lastName: data.lastName,
             password: hashedPassword,
             created: new Date(),
-            accessLevel: "STU"
+            accessLevel: "USER"
         });
         client.close();
         res.send({
@@ -130,7 +130,7 @@ router.post('/login', async(req, res) => {
         const client = await mongodb.MongoClient.connect(process.env.CONNECTION_STRING, {
             useNewUrlParser: true
         });
-        const usersClient = await client.db('hct-formation').collection('users');
+        const usersClient = await client.db(process.env.DB_NAME).collection('users');
         const foundUser = await usersClient.findOne({ email: req.body.email })
         if (foundUser == null) {
             return res.status(403).send({
